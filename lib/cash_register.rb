@@ -1,7 +1,7 @@
 require 'pry'
 
 class CashRegister
-  attr_accessor :total, :discount, :items     #returns the current total
+  attr_accessor :total, :discount, :items, :transaction_amount     #returns the current total
 
   def initialize(discount = 0)     #sets an instance variable @total on initialization to zero
     @total = 0
@@ -13,7 +13,8 @@ class CashRegister
 
   def add_item(title, price, quantity = 1)      #accepts a title, price and optional quantity
     self.total = @total + (price * quantity)   #increases the total, doesn't forget about previous total
-    quantity.times{@items << title}       #adds the correct number of each item to the array
+    quantity.times{@items << title}
+    last_transaction_array = [title, price, quantity]       #adds the correct number of each item to the array
   end
 
   def apply_discount                                        #applies discount if initialized with discount
