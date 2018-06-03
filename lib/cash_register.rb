@@ -13,7 +13,7 @@ class CashRegister
 
   def add_item(title, price, quantity = 1)      #accepts a title, price and optional quantity
     self.total = @total + (price * quantity)   #increases the total, doesn't forget about previous total
-    quantity.times{@items << title}
+    quantity.times{@items << title}       #adds the correct number of each item to the array
   end
 
   def apply_discount                                        #applies discount if initialized with discount
