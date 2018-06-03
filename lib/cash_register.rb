@@ -33,11 +33,11 @@ class CashRegister
   end
 
   def items
-    @items
+    @items                                  #returns array of items
   end
 
   def void_last_transaction
-    self.total = @total - @transactions[0]
+    self.total = @total - @transactions[0]      #calculates the total minus the last transaction
 
     self.total
 
