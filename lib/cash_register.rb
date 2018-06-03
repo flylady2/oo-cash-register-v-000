@@ -13,7 +13,8 @@ class CashRegister
 
 
   def add_item(title, price, quantity = 1)
-    transaction_amount = price * quantity      #accepts a title, price and optional quantity
+    transaction_amount = price * quantity
+    binding.pry      #accepts a title, price and optional quantity
     self.total = @total + transaction_amount   #increases the total, doesn't forget about previous total
     quantity.times{@items << title}             #adds the correct number of each item to the array
     @transactions << transaction_amount
@@ -37,9 +38,9 @@ class CashRegister
   end
 
   def void_last_transaction
-    self.final_total = @total - @transactions[0]
+    final_total = @total - @transactions[0]
 
-    self.final_total
+    final_total
 
 
   end
