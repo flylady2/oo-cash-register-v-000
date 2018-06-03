@@ -6,7 +6,7 @@ class CashRegister
   def initialize(discount = 0)     #sets an instance variable @total on initialization to zero
     @total = 0
     @discount = discount
-    @items = []
+    @items = []       #sets @items to an empty array
   end
 
 
