@@ -17,6 +17,7 @@ class CashRegister
     quantity.times{@items << title}             #adds the correct number of each item to the array
     transaction_amount = price * quantity
     @transactions << transaction_amount
+    binding.pry
 
   end
 
