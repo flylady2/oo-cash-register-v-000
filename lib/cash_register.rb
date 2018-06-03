@@ -37,7 +37,7 @@ class CashRegister
   end
 
   def void_last_transaction
-    self.total = @total - @transactions[0]
+    self.total = @total - @transactions
     binding.pry      #calculates the total minus the last transaction
     self.total
   end
