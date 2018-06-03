@@ -12,13 +12,14 @@ class CashRegister
 
 
 
-  def add_item(title, price, quantity = 1)      #accepts a title, price and optional quantity
-    self.total = @total + (price * quantity)   #increases the total, doesn't forget about previous total
+  def add_item(title, price, quantity = 1)
+    transaction_amount = price * quantity      #accepts a title, price and optional quantity
+    self.total = @total + transaction_amount   #increases the total, doesn't forget about previous total
     quantity.times{@items << title}             #adds the correct number of each item to the array
-    transaction_amount = self.total - @total
-    binding.pry
+    
+    
     @transactions << transaction_amount
-    binding.pry
+    
 
   end
 
