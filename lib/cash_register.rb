@@ -16,7 +16,7 @@ class CashRegister
     quantity.times{@items << title}
     last_transaction_array = [title, price, quantity]
     @transaction_amount = price * quantity
-    binding.pry       #adds the correct number of each item to the array
+   #adds the correct number of each item to the array
   end
 
   def apply_discount                                        #applies discount if initialized with discount
@@ -36,7 +36,7 @@ class CashRegister
   end
 
   def void_last_transaction
-    last_transaction = @items[-1]
+    @total - @transaction_amount
 
   end
 
