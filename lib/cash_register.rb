@@ -17,10 +17,7 @@ class CashRegister
 
     self.total = @total + transaction_amount   #increases the total, doesn't forget about previous total
     quantity.times{@items << title}             #adds the correct number of each item to the array
-    quantity.times{@transactions << price}
-
-
-
+    quantity.times{@transactions << price}      #adds the price of each transaction to @tansactions
   end
 
   def apply_discount                                        #applies discount if initialized with discount
