@@ -17,7 +17,7 @@ class CashRegister
 
     self.total = @total + transaction_amount   #increases the total, doesn't forget about previous total
     quantity.times{@items << title}             #adds the correct number of each item to the array
-    @transactions << price
+    quantity.times(@transactions << price}
     
 
   end
