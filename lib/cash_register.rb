@@ -1,11 +1,12 @@
 require 'pry'
 
 class CashRegister
-  attr_accessor :total, :discount     #returns the current total
+  attr_accessor :total, :discount, :items     #returns the current total
 
   def initialize(discount = 0)     #sets an instance variable @total on initialization to zero
     @total = 0
     @discount = discount
+    @items = []
   end
 
 
